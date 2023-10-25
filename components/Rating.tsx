@@ -1,17 +1,19 @@
-import { useState } from "react";
-import Text from "./Text";
+"use client"
+
+import { useState } from "react"
+import { Text } from "./Text"
 
 type Props = {
-  value: number;
-};
+  value: number
+}
 
-const Rating: React.FC<Props> = ({ value: initialValue }) => {
-  const [hoverValue, setHoverValue] = useState<null | number>(null);
-  const [ratingValue, setRatingValue] = useState<number>(initialValue);
+export const Rating: React.FC<Props> = ({ value: initialValue }) => {
+  const [hoverValue, setHoverValue] = useState<null | number>(null)
+  const [ratingValue, setRatingValue] = useState<number>(initialValue)
 
   return (
     <Text
-      color="white"
+      color='white'
       size={32}
       style={{ lineHeight: 1, cursor: "pointer" }}
       onMouseLeave={() => setHoverValue(null)}
@@ -24,7 +26,7 @@ const Rating: React.FC<Props> = ({ value: initialValue }) => {
           <span
             key={index}
             onClick={() => {
-              setRatingValue(index + 1);
+              setRatingValue(index + 1)
             }}
             onMouseMove={() => setHoverValue(index + 1)}
           >
@@ -32,7 +34,5 @@ const Rating: React.FC<Props> = ({ value: initialValue }) => {
           </span>
         ))}
     </Text>
-  );
-};
-
-export default Rating;
+  )
+}

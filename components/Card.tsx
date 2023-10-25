@@ -1,8 +1,8 @@
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
-const Card: React.FC<Props> = ({ children }: Props) => {
+export const Card: React.FC<Props> = ({ children }: Props) => {
   return (
     <div
       style={{
@@ -21,7 +21,5 @@ const Card: React.FC<Props> = ({ children }: Props) => {
         {children}
       </div>
     </div>
-  );
-};
-
-export default Card;
+  )
+}

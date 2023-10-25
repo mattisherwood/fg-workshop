@@ -2,15 +2,15 @@ type Props = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 > & {
-  direction?: React.CSSProperties["flexDirection"];
-  gap?: React.CSSProperties["gap"];
-  alignItems?: React.CSSProperties["alignItems"];
-  justifyContent?: React.CSSProperties["justifyContent"];
-  padding?: React.CSSProperties["padding"];
-  children: React.ReactNode;
-};
+  direction?: React.CSSProperties["flexDirection"]
+  gap?: React.CSSProperties["gap"]
+  alignItems?: React.CSSProperties["alignItems"]
+  justifyContent?: React.CSSProperties["justifyContent"]
+  padding?: React.CSSProperties["padding"]
+  children: React.ReactNode
+}
 
-const Stack: React.FC<Props> = ({
+export const Stack: React.FC<Props> = ({
   gap = 24,
   direction = "column",
   alignItems = "flex-start",
@@ -35,7 +35,5 @@ const Stack: React.FC<Props> = ({
     >
       {children}
     </div>
-  );
-};
-
-export default Stack;
+  )
+}
