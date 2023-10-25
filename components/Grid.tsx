@@ -2,10 +2,10 @@ type Props = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 > & {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
-const Grid: React.FC<Props> = ({ children, ...props }) => {
+export const Grid: React.FC<Props> = ({ children, ...props }) => {
   return (
     <div
       style={{
@@ -16,7 +16,5 @@ const Grid: React.FC<Props> = ({ children, ...props }) => {
     >
       {children}
     </div>
-  );
-};
-
-export default Grid;
+  )
+}

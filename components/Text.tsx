@@ -2,13 +2,13 @@ type Props = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLParagraphElement>,
   HTMLParagraphElement
 > & {
-  size?: React.CSSProperties["fontSize"];
-  weight?: React.CSSProperties["fontWeight"];
-  color?: React.CSSProperties["color"];
-  align?: React.CSSProperties["textAlign"];
-};
+  size?: React.CSSProperties["fontSize"]
+  weight?: React.CSSProperties["fontWeight"]
+  color?: React.CSSProperties["color"]
+  align?: React.CSSProperties["textAlign"]
+}
 
-const Text: React.FC<Props> = ({
+export const Text: React.FC<Props> = ({
   size = 16,
   color = "text",
   weight = "normal",
@@ -30,7 +30,5 @@ const Text: React.FC<Props> = ({
     >
       {children}
     </p>
-  );
-};
-
-export default Text;
+  )
+}
